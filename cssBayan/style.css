@@ -3,3 +3,44 @@
     padding: 0;
     border: 0;
 }
+body{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    width: 100%;
+}
+hr{
+    height: 2px;
+    background-color: gray;
+}
+.accordeon-wrapper{
+    width: 100%;
+}
+.mem{
+    width: 100%;
+    margin-top: 10px;
+}
+.close-icon{
+    transform: rotate(0deg);
+    transition: all 500ms ease-in-out;
+}
+.mem:hover .mem__img{
+    display: block;
+    transform: scale(1);
+    transition: all 2000ms ease-in-out;
+}
+.mem:hover .close-icon{
+    transform: rotate(45deg);
+}
+.mem__img{
+    width: 100%;
+    display: none;
+    transform: scale(0.0);
+}
+.mem__title-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
