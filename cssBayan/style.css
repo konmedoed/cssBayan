@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    width: 100%;
+}
+.crossline{
+    height: 0.125rem;
+    background-color: gray;
+    margin-top: 0.25rem;
+}
+.accordeon-wrapper{
+    width: 100%;
+}
+.accordeon-wrapper:hover .close-icon{
+    display: block;
+}
+.accordeon-wrapper:hover .mem__title-wrapper{
+    color: black;
+}
+.mem-input {
+    display: none;
+}
+.mem{
+    width: 100%;
+    margin-top: 0.6rem;
+}
+.mem:hover{
+    cursor: pointer;
+}
+.mem__img-wrapper{
+    display: flex;
+    justify-content: center;
+    height: 0rem;
+    transition: height 500ms ease-in-out;
+}
+.mem__title-wrapper{
+    display: flex;
+    justify-content: space-between;
+    color: blue;
+}
+.close-icon{
+    display: block;
+    height: 1rem;
+    transform: rotate(45deg);
+    transition: all 500ms ease-in-out;
+}
+.material-symbols-outlined{
+    font-size: 1.5rem !important;
+}
+.mem:hover .close-icon{
+    transform: rotate(0deg);
+}
+.mem__img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.mem:hover .mem__img-wrapper{
+    height: 50vh;
+}
+.font-large{
+    font-size: 2.5rem;
+}
+.font-normal{
+    font-size: 1.5rem;
+}
+.mem-input:checked + label > .mem__img-wrapper {
+    height: 50vh;
+}
+.mem-input:checked + label > .mem__title-wrapper {
+    color: black;
+}
+.mem-input:active + label  > .mem__title-wrapper {
+    color: blue !important;
+}
+.mem-input:checked + label  > .close-icon {
+    transform: rotate(45deg);
+}
+@media (min-width: 820px) and (max-width: 1919.9px){
+    .header{
+        max-width: 62rem;
+    }
+    .accordeon-wrapper{
+        max-width: 62rem;
+    }
+    .font-large{
+        font-size: 4rem;
+    }
+    .font-normal{
+        font-size: 3rem;
+    }
+    .material-symbols-outlined{
+        font-size: 3rem !important;
+    }
+    .close-icon{
+        display: block;
+        height: 3rem;
+    }
+}
+@media (min-width: 1920px){
+    .header{
+        max-width: 100rem;
+    }
+    .accordeon-wrapper{
+        max-width: 100rem;
+    }
+    .font-large{
+        font-size: 1.5rem;
+    }
+    .font-normal{
+        font-size: 1rem;
+        color: inherit;
+    }
+    .material-symbols-outlined{
+        font-size: 1rem !important;
+    }
+    .close-icon{
+        display: none;
+        height: 1rem;
+    }
+    .info{
+        color: inherit;
+    }
+
+}
