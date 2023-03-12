@@ -9,7 +9,7 @@ body{
     flex-direction: column;
     align-items: center;
 }
-header{
+.header{
     width: 100%;
 }
 hr{
@@ -19,6 +19,9 @@ hr{
 }
 .accordeon-wrapper{
     width: 100%;
+}
+.mem-input {
+    display: none;
 }
 .mem{
     width: 100%;
@@ -30,8 +33,10 @@ hr{
     height: 0px;
     transition: height 500ms ease-in-out;
 }
-.mem:hover .mem__img-wrapper{
-    height: 300px;
+
+.mem__title-wrapper{
+    display: flex;
+    justify-content: space-between;
 }
 .close-icon{
     transform: rotate(0deg);
@@ -41,12 +46,36 @@ hr{
     transform: rotate(45deg);
 }
 .mem__img{
-    height: 0px;
-}
-.mem:hover .mem__img{
     height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
-.mem__title-wrapper{
-    display: flex;
-    justify-content: space-between;
+/* .mem:hover .mem__img{
+    height: 100%;
+} */
+.mem:hover .mem__img-wrapper{
+    height: 50vh;
+}
+.mem-input:checked + label > .mem__img-wrapper {
+    height: 50vh;
+}
+
+@media (min-width: 320px) and (max-width: 819.9px){
+
+}
+@media (min-width: 820px) and (max-width: 1919.9px){
+    .header{
+        max-width: 1000px;
+    }
+    .accordeon-wrapper{
+        max-width: 1000px;
+    }
+}
+@media (min-width: 1920px){
+    .header{
+        max-width: 1600px;
+    }
+    .accordeon-wrapper{
+        max-width: 1600px;
+    }
 }
