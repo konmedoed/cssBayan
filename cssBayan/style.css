@@ -15,6 +15,7 @@ header{
 hr{
     height: 2px;
     background-color: gray;
+    margin-top: 5px;
 }
 .accordeon-wrapper{
     width: 100%;
@@ -23,22 +24,27 @@ hr{
     width: 100%;
     margin-top: 10px;
 }
+.mem__img-wrapper{
+    display: flex;
+    justify-content: center;
+    height: 0px;
+    transition: height 500ms ease-in-out;
+}
+.mem:hover .mem__img-wrapper{
+    height: 300px;
+}
 .close-icon{
     transform: rotate(0deg);
     transition: all 500ms ease-in-out;
-}
-.mem:hover .mem__img{
-    display: block;
-    transform: scale(1);
-    transition: all 2000ms ease-in-out;
 }
 .mem:hover .close-icon{
     transform: rotate(45deg);
 }
 .mem__img{
-    width: 100%;
-    display: none;
-    transform: scale(0.0);
+    height: 0px;
+}
+.mem:hover .mem__img{
+    height: 100%;
 }
 .mem__title-wrapper{
     display: flex;
