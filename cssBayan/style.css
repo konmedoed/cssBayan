@@ -50,14 +50,14 @@ body{
 .close-icon{
     display: block;
     height: 1rem;
-    transform: rotate(0deg);
+    transform: rotate(45deg);
     transition: all 500ms ease-in-out;
 }
 .material-symbols-outlined{
     font-size: 1.5rem !important;
 }
 .mem:hover .close-icon{
-    transform: rotate(45deg);
+    transform: rotate(0deg);
 }
 .mem__img{
     height: 100%;
@@ -81,6 +81,9 @@ body{
 }
 .mem-input:active + label  > .mem__title-wrapper {
     color: blue !important;
+}
+.mem-input:checked + label  > .close-icon {
+    transform: rotate(45deg);
 }
 @media (min-width: 820px) and (max-width: 1919.9px){
     .header{
